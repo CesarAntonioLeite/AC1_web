@@ -1,0 +1,16 @@
+<h1>Conmebol anula expulsão de Plata, que fica à disposição do Flamengo para a volta contra o Estudiantes</h1>
+<h2>por Thiago Lima e Fred Gomes</h2>
+<h3>19/09/2025 14h07</h3>
+<p>Curtidas: {{curtidas}}</p>
+<button (click)="curtir()">Curtir</button>
+
+<p>O cartão vermelho para Plata durante a vitória por 2 a 1 do Flamengo sobre o Estudiantes, pelo jogo de ida das quartas de final da Libertadores, na noite desta quinta-feira, foi anulado pela Conmebol. Nesta sexta-feira, o Flamengo recebeu um comunicado da entidade informando ainda que o jogador, consequentemente, não está mais suspenso da próxima partida, o jogo de volta, marcado para a próxima quinta-feira (25), em La Plata.</p>
+
+<p>Comentarios</p>
+<input (keyup.enter)="comentar($event)" placeholder="Digite seu comentario">
+<ul>
+    @for (comentario of comentarios; track $index)
+    {
+        <p>{{comentario}}</p>
+    }
+</ul>
