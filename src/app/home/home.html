@@ -1,0 +1,23 @@
+<h1>Últimas notícias</h1>
+
+@for (item of noticias; track $index) {
+  <h2>{{ item.titulo }}</h2>
+  <h3>por {{ item.autor }}</h3>
+  <small>{{ item.data }}</small>
+
+  <p>{{ item.conteudo }}</p>
+
+  <p>Curtidas: {{ item.curtidas }}</p>
+  <button (click)="curtir(item)">Curtir</button>
+
+  <h4>Comentários</h4>
+  <input (keyup.enter)="comentar($event, item)" placeholder="Digite seu comentário">
+
+  <ul>
+    @for (c of item.comentarios; track $index) {
+      <p>{{ c }}</p>
+    }
+  </ul>
+
+  <hr>
+}
